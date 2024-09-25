@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    background: #f3f3f3;
+    flex-direction: column;
+    margin: 0;
+}
+.main {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    transition: transform 0.2s;
+    width: 300px;
+    text-align: center;
+}
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #44166A;
+}
+h4 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    color: #404040;
+    font-size: 14px;
+    margin: 0;
+}
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+}
+label {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    display: block;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+    color: #404040;
+}
+input {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+input:focus {
+    outline: none; /* Elimina el borde azul predeterminado del navegador */
+    border: 2px solid #A62EFF; /* Define el color y grosor del borde en focus */
+    box-shadow: 0 0 5px rgba(166, 46, 255, 0.5); /* Añade un efecto de sombra */
+}
+.login-options {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding-left: 0; /* Elimina el padding izquierdo */
+}
+.login-options label p {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #404040;
+    margin: auto;
+}
+.login-options input[type="checkbox"] {
+    margin: 0;
+    margin-right: 8px; /* Espacio entre checkbox y texto */
+}
+button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    padding: 15px;
+    border-radius: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: #A62EFF;
+    width: 50%;
+    font-size: 16px;
+}
+button:hover {
+    box-shadow: 0 0px 15px rgba(166, 46, 255, 1);
+}
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-image {
+    width: 160px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+.main {
+    width: 90%;
+    padding: 15px;
+}
+button {
+    width: 60%;
+}
+}
+
+@media (max-width: 480px) {
+.main {
+    width: 100%;
+    padding: 10px;
+}
+button {
+    width: 100%;
+}
+h1 {
+    font-size: 20px;
+}
+h4 {
+    font-size: 12px;
+}
+input {
+    padding: 8px;
+}
+}
