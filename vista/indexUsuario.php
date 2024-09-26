@@ -8,6 +8,9 @@
   <link rel="icon" href="../img/www.ico">
   <link rel="stylesheet" href="../css/Stylemenu.css">
   <link rel="stylesheet" href="../css/Styletablas.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 
@@ -26,7 +29,7 @@
         </button>
       </header>
       <nav class="sidebar-nav">
-      <ul>
+        <ul>
           <li><a href="indexmenu.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
           <li><a href="indexEquipo.php"><i class="fas fa-laptop"></i> <span>Equipos</span></a></li>
           <li><a href="indexUsuario.php"><i class="fas fa-users"></i> <span>Usuarios</span></a></li>
@@ -45,7 +48,7 @@
             <span>Usuario</span>
           </button>
           <div class="user-menu-dropdown" id="user-menu-dropdown" hidden>
-            
+
             <a href="#" id="logout-link">Salir</a>
           </div>
         </div>
@@ -53,7 +56,7 @@
       <section class="content" id="usuarios-section">
         <h2>Listado de Usuarios</h2>
         <div class="button-container">
-        <button href="agregarUsuario.php" id="add-user-btn">
+          <button href="agregarUsuario.php" id="add-user-btn">
             <i class="fas fa-plus"></i> Agregar nuevo Usuarios
           </button>
           <input type="text" id="search-input" placeholder="Buscar...">
@@ -79,78 +82,74 @@
       </section>
     </main>
   </div>
+
+
   <footer class="main-footer">
-  <p><strong>&copy; 2024 Driver <small>Com</small>.  Todos los derechos reservados.</strong></p>
+    <p><strong>&copy; 2024 Driver <small>Com</small>. Todos los derechos reservados.</strong></p>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const sidebar = document.getElementById('sidebar');
-      const toggleSidebar = document.getElementById('toggle-sidebar');
-      const userMenuToggle = document.getElementById('user-menu-toggle');
-      const userMenuDropdown = document.getElementById('user-menu-dropdown');
-      const searchInput = document.getElementById('search-input');
-      const userTable = document.getElementById('user-table');
-      const addUserBtn = document.getElementById('add-user-btn');
-      const downloadPdfBtn = document.getElementById('download-pdf-btn');
 
-      // Toggle sidebar
-      toggleSidebar.addEventListener('click', function() {
-        sidebar.classList.toggle('collapsed');
-        document.body.classList.toggle('sidebar-collapsed');
-      });
+  <!-- Modal de confirmación de eliminación -->
+  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Confirmar eliminación</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ¿Estás seguro de que deseas eliminar este registro?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger" id="confirm-delete-btn">Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal de edición -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Editar Usuario</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="edit-user-form">
+            <input type="hidden" id="edit-id" name="ID_Usuario">
+            <div class="mb-3">
+              <label for="edit-nombre" class="form-label">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="edit-nombre" name="Nombre_Usuario" required>
+            </div>
+            <div class="mb-3">
+              <label for="edit-email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="edit-email" name="Correo_Electronico" required>
+            </div>
+            <div class="mb-3">
+              <label for="edit-estado" class="form-label">Estado</label>
+              <input type="text" class="form-control" id="edit-estado" name="Estado" required>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="save-changes-btn">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      // User menu dropdown
-      userMenuToggle.addEventListener('click', function(event) {
-        event.stopPropagation();
-        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
-        this.setAttribute('aria-expanded', !expanded);
-        userMenuDropdown.hidden = expanded;
-      });
 
-      // Close the dropdown when clicking outside
-      document.addEventListener('click', function(event) {
-        if (!userMenuToggle.contains(event.target) && !userMenuDropdown.contains(event.target)) {
-          userMenuToggle.setAttribute('aria-expanded', 'false');
-          userMenuDropdown.hidden = true;
-        }
-      });
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-      // Close dropdown when pressing Escape key
-      document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-          userMenuToggle.setAttribute('aria-expanded', 'false');
-          userMenuDropdown.hidden = true;
-        }
-      });
 
-      // Filter table rows based on search input
-      searchInput.addEventListener('input', function() {
-        const filter = this.value.toLowerCase();
-        const rows = userTable.querySelectorAll('tbody tr');
-        rows.forEach(row => {
-          const cells = row.querySelectorAll('td');
-          const match = Array.from(cells).some(cell => cell.textContent.toLowerCase().includes(filter));
-          row.style.display = match ? '' : 'none';
-        });
-      });
 
-      // Download table as PDF
-      downloadPdfBtn.addEventListener('click', function() {
-        const jsPDF = window.jspdf.jsPDF;
-        const pdf = new jsPDF();
-        pdf.text("Usuarios", 10, 10);
-        pdf.autoTable({
-          html: '#user-table'
-        });
-        pdf.save('usuarios.pdf');
-      });
 
-      // Add User Button
-      addUserBtn.addEventListener('click', function() {
-        window.location.href = 'agregarUsuario.php';
-      });
-    });
-  </script>
+
+  <script src="../js/EliminarModal.js"></script>
+  <script src="../js/usuarios.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
 </body>
