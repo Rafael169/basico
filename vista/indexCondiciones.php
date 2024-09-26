@@ -130,6 +130,10 @@
           "4. Protección de Datos: Se deben respetar las políticas de privacidad y protección de datos.",
           "5. Modificaciones: DriverCom se reserva el derecho de modificar estas condiciones en cualquier momento.",
           "Al utilizar el sistema, los usuarios aceptan cumplir con estas condiciones."
+
+
+
+          
         ];
         pdf.text(textLines, 10, 60);
         pdf.save('condiciones_de_uso.pdf');

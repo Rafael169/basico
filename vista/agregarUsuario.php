@@ -59,28 +59,37 @@
 
             <div class="form-group">
               <label for="nombre-usuario">Nombre del Usuario</label>
-              <input type="text" id="t1" name="t1" required>
+              <input type="text" id="t1" name="t1" placeholder="Ingrese Nombre Usuario" required>
             </div>
 
             <div class="form-group">
               <label for="email-usuario">Correo Electrónico</label>
-              <input type="email" id="t2" name="t2" required>
+              <input type="email" id="t2" name="t2" placeholder="Ingrese Correo" required>
             </div>
 
             <div class="form-group">
               <label for="password-usuario">Contraseña</label>
-              <input type="password" id="t3" name="t3" required>
+              <input type="password" id="t3" name="t3" placeholder="Ingrese Contraseña" required>
             </div>
 
             <div class="form-group">
               <label for="creado-por">Creado Por</label>
-              <input type="text" id="t5" name="t5" required>
+              <input type="text" id="t5" name="t5" placeholder="Ingrese Creado Por" required>
             </div>
 
             <div class="form-group">
               <label for="rol">Rol</label>
-              <input type="number" id="t6" name="t6" required>
+              <select id="t6" name="t6" required>
+                <option value="" disabled selected>Seleccione un rol</option>
+                <option value="1">Super Administrador</option>
+                <option value="2">Administrador</option>
+              </select>
             </div>
+
+            <!-- <div class="form-group">
+              <label for="rol">Rol</label>
+              <input type="number" id="t6" name="t6" placeholder="Ingrese Rol id" required>
+            </div> -->
 
             <!-- <div class="form-group">
               <label for="fecha-creacion">Fecha de Creación</label>

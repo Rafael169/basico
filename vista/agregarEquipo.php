@@ -56,23 +56,23 @@
 
         <!-- Formulario de Equipos -->
         <div class="form-container">
-          <form id="form-equipos" action="../vista/equipo/guardarEquipo.php" method="POST">
+          <form id="form-equipos" action="../vista/usuario/guardarEquipo.php" method="POST">
             <!-- Campo oculto para ID Equipo (usado en edición) -->
-            <input type="hidden" id="id_equipo" name="id_equipo">
+            <!-- <input type="hidden" id="id_equipo" name="id_equipo"> -->
 
             <div class="form-group">
               <label for="numero-serie">Número de Serie</label>
-              <input type="text" id="numero_serie" name="numero_serie" required>
+              <input type="text" id="t1" name="t1" placeholder="Ingrese Número de Serie" required>
             </div>
 
             <div class="form-group">
               <label for="nombre-equipo">Nombre del Equipo</label>
-              <input type="text" id="nombre_equipo" name="nombre_equipo" placeholder="Ingrese el nombre del equipo" required>
+              <input type="text" id="t2" name="t2" placeholder="Ingrese el nombre del equipo" required>
             </div>
 
             <div class="form-group">
               <label for="marca">Marca</label>
-              <select id="categoria" name="categoria" required>
+              <select id="t3" name="t3" required>
                 <option value="" disabled selected>Seleccione una marca</option>
                 <option value="HP">HP</option>
                 <option value="DELL">DELL</option>
@@ -86,7 +86,7 @@
 
             <div class="form-group">
               <label for="categoria">Categoría</label>
-              <select id="categoria" name="categoria" required>
+              <select id="t4" name="t4" required>
                 <option value="" disabled selected>Seleccione una categoría</option>
                 <option value="Desktop">Desktop</option>
                 <option value="Laptop">Laptop</option>
@@ -105,18 +105,18 @@
 
             <div class="form-group">
               <label for="ubicacion">Ubicación</label>
-              <input type="text" id="ubicacion" name="ubicacion" required>
+              <input type="text" id="t6" name="t6" placeholder="Ingrese La Ubicacion" required>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label for="fecha-ingreso">Fecha de Ingreso</label>
-              <input type="date" id="fecha_ingreso" name="fecha_ingreso" required>
-            </div>
+              <input type="date" id="fecha_ingreso" name="fecha_ingreso" placeholder="Ingrese la Fecha de Ingreso" required>
+            </div> -->
 
             <div class="form-group">
-              <label for="ingresado-por">Ingresado Por</label>
-              <input type="text" id="ingresado_por" name="ingresado_por" required>
-              <button type="submit" id="submit-btn">Guardar Equipo</button>
+              <label for="ingresado-por"></label>
+              <input type="hidden" id="t8" name="t8" placeholder="Ingreso Por" required>
+              <button type="submit" value="1" id="submit-btn">Guardar Equipo</button>
             </div>
 
             <div class="form-group">

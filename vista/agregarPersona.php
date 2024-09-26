@@ -61,27 +61,27 @@
 
             <div class="form-group">
               <label for="nombre-completo">Nombre Completo</label>
-              <input type="text" id="nombre" name="nombre" required>
+              <input type="text" id="nombre" name="nombre" placeholder="Ingrese Nombres" required>
             </div>
 
             <div class="form-group">
               <label for="numero-documento">Número de Documento</label>
-              <input type="text" id="ndoc" name="ndoc" required>
+              <input type="text" id="ndoc" name="ndoc" placeholder="Ingrese N° Documento" required>
             </div>
 
             <div class="form-group">
               <label for="telefono">Teléfono</label>
-              <input type="text" id="tel" name="tel" required>
+              <input type="text" id="tel" name="tel" placeholder="Ingrese Número Telefono" required>
             </div>
 
             <div class="form-group">
               <label for="correo">Correo Electrónico</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" placeholder="Ingrese El Correo" required>
             </div>
 
             <div class="form-group">
               <label for="direccion">Dirección</label>
-              <input type="text" id="dir" name="dir" required>
+              <input type="text" id="dir" name="dir" placeholder="Ingrese La Dirrección" required>
             </div>
 
             <div class="form-group">

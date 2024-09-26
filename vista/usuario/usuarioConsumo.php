@@ -29,6 +29,7 @@ if (isset($data['error'])) {
         // $pass = htmlspecialchars($item['Contrasena']);
         $estado = htmlspecialchars($item['Estado']);
         $fmodi = htmlspecialchars($item['Fecha_Modificacion']);
+        $rol = htmlspecialchars($item['ID_Rol']);
 
         echo '<tr>';
         echo '<td>' . $id . '</td>';
@@ -37,6 +38,7 @@ if (isset($data['error'])) {
         // echo '<td>' . $pass . '</td>';
         echo '<td>' . $estado . '</td>';
         echo '<td>' . $fmodi . '</td>';
+        echo '<td>' . $rol . '</td>';
 
 
 

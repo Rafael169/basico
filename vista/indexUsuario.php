@@ -70,6 +70,7 @@
               <th>Correo_Electronico</th>
               <th>Estado</th>
               <th>Fecha_Modificacion</th>
+              <th>rol</th>
               <th>Acciones</th>
             </tr>
           </thead>

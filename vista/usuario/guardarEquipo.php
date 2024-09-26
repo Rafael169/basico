@@ -10,7 +10,6 @@ if (
     isset($_POST['t2']) &&
     isset($_POST['t3']) &&
     isset($_POST['t4']) &&
-    isset($_POST['t5']) &&
     isset($_POST['t6']) &&
     isset($_POST['t8'])
 ) {
@@ -18,9 +17,7 @@ if (
     $t2 = $_POST['t2'];
     $t3 = $_POST['t3'];
     $t5 = $_POST['t4'];
-    $t6 = $_POST['t5'];
     $t6 = $_POST['t6'];
-    // $t6 = $_POST['t7'];
     $t6 = $_POST['t8'];
 
 
@@ -30,9 +27,7 @@ if (
         't2' => $t2,
         't3' => $t3,
         't4' => $t4,
-        't5' => $t5,
         't6' => $t6,
-        // 't7' => $t7,
         't8' => $t8,
 
     ));

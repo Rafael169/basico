@@ -40,7 +40,7 @@
         <div class="container d-flex align-items-center justify-content-between">
 
             <div class="logo">
-                <a href="index.html"><img src="../img/Logo_DriverCom.png" alt="" class="img-fluid"></a>
+                <a href="#"><img src="../img/Logo_DriverCom.png" alt="" class="img-fluid"></a>
 
             </div>
 
