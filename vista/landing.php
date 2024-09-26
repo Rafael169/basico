@@ -52,7 +52,7 @@
                     <li><a class="nav-link scrollto" href="#contact">Contacto</a></li>
                 </ul>
                 <div class="text-center text-lg-start">
-                    <a href="login.php" class="btn-get-started 2">Empieza ahora</a>
+                    <a href="login.php" class="btn-get-started 2">Login</a>
                 </div>
                 </li>
                 <i class="bi bi-list mobile-nav-toggle"></i>
