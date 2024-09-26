@@ -44,7 +44,7 @@
             <span>Usuario</span>
           </button>
           <div class="user-menu-dropdown" id="user-menu-dropdown" hidden>
-            <a href="#" id="perfil-link">Perfil</a>
+            
             <a href="#" id="logout-link">Salir</a>
           </div>
         </div>

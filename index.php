@@ -1,5 +1,5 @@
 <?php 
-header("Location: vista/login.php");
+header("Location: vista/landing.php");
 exit();
 ?>
 
