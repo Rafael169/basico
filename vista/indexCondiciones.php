@@ -43,8 +43,8 @@
             <span>Usuario</span>
           </button>
           <div class="user-menu-dropdown" id="user-menu-dropdown" hidden>
-            
-            <a href="#" id="logout-link">Salir</a>
+            <a href="close.php" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
+
           </div>
         </div>
       </header>
@@ -72,7 +72,7 @@
   </div>
 
   <footer class="main-footer">
-  <p><strong>&copy; 2024 Driver <small>Com</small>.  Todos los derechos reservados.</strong></p>
+    <p><strong>&copy; 2024 Driver <small>Com</small>. Todos los derechos reservados.</strong></p>
 
   </footer>
 
@@ -133,7 +133,7 @@
 
 
 
-          
+
         ];
         pdf.text(textLines, 10, 60);
         pdf.save('condiciones_de_uso.pdf');

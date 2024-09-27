@@ -30,7 +30,7 @@
           <li><a href="indexUsuario.php"><i class="fas fa-users"></i> <span>Usuarios</span></a></li>
           <li><a href="indexPersona.php"><i class="fas fa-user"></i> <span>Persona</span></a></li>
           <li><a href="indexPrestamos.php"><i class="fas fa-handshake"></i> <span>Préstamos</span></a></li>
-          <li><a href="indexCondiciones.php"><i class="fas fa-file-contract"></i> <span>Condiciones de uso</span></a></li>
+          <li><a href="indexCondiciones.php"><i class="fas fa-file-contract"></i><span>Condiciones de uso</span></a></li>
         </ul>
       </nav>
     </aside>
@@ -43,8 +43,8 @@
             <span>Usuario</span>
           </button>
           <div class="user-menu-dropdown" id="user-menu-dropdown" hidden>
-            
-            <a href="#" id="logout-link">Salir</a>
+          <a href="close.php" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
+
           </div>
         </div>
       </header>

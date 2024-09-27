@@ -48,8 +48,8 @@
             <span>Usuario</span>
           </button>
           <div class="user-menu-dropdown" id="user-menu-dropdown" hidden>
+            <a href="close.php" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
 
-            <a href="#" id="logout-link">Salir</a>
           </div>
         </div>
       </header>
