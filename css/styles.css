@@ -59,7 +59,7 @@ input {
 }
 input:focus {
     outline: none; /* Elimina el borde azul predeterminado del navegador */
-    border: 2px solid #00915c; /* Define el color y grosor del borde en focus */
+    border: 2px solid #520091; /* Define el color y grosor del borde en focus */
     box-shadow: 0 0 5px rgba(166, 46, 255, 0.5); /* Añade un efecto de sombra */
 }
 .login-options {
