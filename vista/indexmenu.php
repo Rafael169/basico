@@ -17,8 +17,7 @@
     <aside class="sidebar" id="sidebar">
       <header class="sidebar-header">
         <h1>
-          <img src="../img/LogoDrivercom.png" alt="Logo DriverCom" width="40" height="40">
-          Driver<small>Com</small>
+          <img src="../img/LogoDrivercom.png" alt="Logo DriverCom" width="100" height="70">
         </h1>
         <button id="toggle-sidebar" class="toggle-sidebar" aria-label="Toggle Sidebar">
           <i class="fas fa-bars"></i>
@@ -55,37 +54,37 @@
           <article class="box">
             <a href="indexEquipo.php">
               <i class="fas fa-laptop" aria-hidden="true"></i>
-              <span>Lista Equipos</span>
+              <h1>Lista Equipos</h1>
             </a>
           </article>
           <article class="box">
             <a href="indexUsuario.php">
               <i class="fas fa-users" aria-hidden="true"></i>
-              <span>Lista Usuarios</span>
+              <h1>Lista Usuarios</h1>
             </a>
           </article>
           <article class="box">
             <a href="indexPrestamos.php">
               <i class="fas fa-handshake" aria-hidden="true"></i>
-              <span>Lista Préstamos</span>
+              <h1>Lista Préstamos</h1>
             </a>
           </article>
           <article class="box">
             <a href="agregarusuario.php">
               <i class="fas fa-file-contract" aria-hidden="true"></i>
-              <span>Agregar nuevo equipo</span>
+              <h1>Agregar nuevo equipo</h1>
             </a>
           </article>
           <article class="box">
             <a href="agregarequipo.php">
               <i class="fas fa-box" aria-hidden="true"></i>
-              <span>Agregar nuevo Usuario</span>
+              <h1>Agregar nuevo Usuario</h1>
             </a>
           </article>
           <article class="box">
             <a href="agregarPrestamo.php">
               <i class="fas fa-box-open" aria-hidden="true"></i>
-              <span>Agregar nuevo Préstamo</span>
+              <h1>Agregar nuevo Préstamo</h1>
             </a>
           </article>
   

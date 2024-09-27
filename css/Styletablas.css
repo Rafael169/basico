@@ -1,10 +1,10 @@
 
 :root {
-  --primary-color: #b300ff;
+  --primary-color: #ffffff;
   --primary-hover: #ae00ff;
   --text-color: #333;
   --bg-color: #f4f4f4;
-  --white: #ffffff;
+  --white: #808080;
   --sidebar-width: 250px;
   --sidebar-collapsed-width: 60px;
 }
