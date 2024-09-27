@@ -43,7 +43,7 @@ if (isset($data['error'])) {
 
         echo '<td>
                 <a href="#" class="button-container" data-id="' . $id . '"><img src="../img/editar.png"></a>
-                <a href="eliminaPrestamo.php?id=' . $id . '" class="button-container" onclick="return confirm(\'¿Estás seguro de que deseas eliminar este registro?\');"><img src="../img/papelera.png"></a>
+                <a href="#" class="button-container delete-btn" data-id="' . $id . '" data-type="prestamo"><img src="../img/papelera.png"></a>
               </td>';
               
 

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.delete-btn').forEach(function (button) {
         button.addEventListener('click', function (event) {
             event.preventDefault();
-            deleteLink = 'elimina.php?id=' + this.getAttribute('data-id'); // Guardar el enlace de eliminación
+            deleteLink = 'eliminaPersona.php?id=' + this.getAttribute('data-id'); // Guardar el enlace de eliminación
             deleteModal.show(); // Mostrar el modal
         });
     });

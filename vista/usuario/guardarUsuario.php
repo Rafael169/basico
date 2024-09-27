@@ -59,15 +59,5 @@ if (isset($_POST['t1']) && isset($_POST['t2']) && isset($_POST['t3']) && isset($
             $_SESSION['mensaje'] = 'Error al guardar el usuario: ' . (isset($responseData['error']) ? $responseData['error'] : 'Error desconocido');
             header("Location: ../indexUsuario.php");
         }
-  // } else {
-        // Si la respuesta no es JSON válido
-      ///  $_SESSION['mensaje'] = 'Respuesta del servidor no es JSON válido. Respuesta recibida: ' . $response;
-       // header("Location: ../menu.php?error=Json");
-    //}
-
-//} else {
-    // Si faltan datos en el POST
-  //  $_SESSION['mensaje'] = 'Datos incompletos';
- //   header("Location: ../menu.php?error=incompleto");
 }
 ?>

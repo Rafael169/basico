@@ -27,7 +27,7 @@ $data = consumoApi($baseUrl, $postData);
 
 if (isset($data['error'])) {
     $_SESSION['mensaje'] = 'Usuario o contraseña incorrectos';
-    header("Location: ../index.php?error=error"); 
+    header("Location: ../vista/login.php?error=error"); 
     exit();
 } else {
     $_SESSION['datos'] = $data;

@@ -46,7 +46,7 @@ if (isset($data['error'])) {
                 <a href="#" class="button-container edit-btn" data-id="' . $id . '" data-nombre="' . $nombre . '" data-email="' . $email . '" data-estado="' . $estado . '">
                 <img src="../img/editar.png">
                 </a>
-                <a href="#" class="button-container delete-btn" data-id="' . $id . '"><img src="../img/papelera.png"></a>
+                <a href="#" class="button-container delete-btn" data-id="' . $id . '" data-type="usuario"><img src="../img/papelera.png"></a>
                 </td>';
         echo '</tr>';
     }
