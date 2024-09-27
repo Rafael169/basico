@@ -4,7 +4,7 @@
   --primary-hover: #ae00ff;
   --text-color: #333;
   --bg-color: #f4f4f4;
-  --white: #000000; /* Color de fondo de las letras cambiado a negro ya que no se veia o yo estoy ciego */
+  --white: #aaaaaa; /* Color de fondo de las letras cambiado a negro ya que no se veia o yo estoy ciego */
   --sidebar-width: 250px;
   --sidebar-collapsed-width: 60px;
 }

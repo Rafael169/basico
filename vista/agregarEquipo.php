@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro de Equipos</title>
   <link rel="stylesheet" href="../css/Stylemenu.css">
-  <link rel="stylesheet" href="../css/Stylosregistro.css">
+  <link rel="stylesheet" href="../css/Styletablas.css">
   <link rel="stylesheet" href="../css/formularios.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -126,7 +126,7 @@
     <p><strong>&copy; 2024 Driver <small>Com</small>. Todos los derechos reservados.</strong></p>
   </footer>
 
-  <script src="../js/addEquipo.js"></script>
+  <script src="../js/add/addEquipo.js"></script>
 
 </body>
 

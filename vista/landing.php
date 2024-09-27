@@ -463,7 +463,7 @@
     <script src="../vendor/swiper/swiper-bundle.min.js"></script>
 
     <!-- Main JS File -->
-    <script src="../js/main.js"></script>
+    <script src="../js/principales/main.js"></script>
 
 </body>
 

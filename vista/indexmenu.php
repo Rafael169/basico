@@ -94,7 +94,7 @@
   <footer class="main-footer">
     <p><strong>&copy; 2024 Driver <small>Com</small>.  Todos los derechos reservados.</strong></p>
   </footer>
-  <script src="../js/menu.js"></script>
+  <script src="../js/principales/menu.js"></script>
 </body>
 
 </html>

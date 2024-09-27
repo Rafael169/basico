@@ -28,6 +28,9 @@ if (isset($_SESSION['datos']['data'][0]['rol'])) {
 
 <body>
     <div class="Logo_Container"> <img src="../img/LogoDrivercom.png" alt="Logo" class="logo-image"> </div>
+    <br></br>
+    <a href="http://localhost/basico/vista/agregarUsuario.php"><strong> ======> Aqui para ingresar mientas tanto<====== </strong></a>
+    <br></br>
     <div class="main">
         <h1 class="title_1">Bienvenido</h1>
         <form action="../modelo/indexvalida.php" method="POST">

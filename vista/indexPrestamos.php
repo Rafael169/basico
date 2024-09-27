@@ -84,8 +84,7 @@
   <footer class="main-footer">
     <p><strong>&copy; 2024 Driver <small>Com</small>. Todos los derechos reservados.</strong></p>
   </footer>
-  
-  <!-- modal de confirmación de eliminación -->
+  !-- Modal de confirmación de eliminación -->
   <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -103,8 +102,12 @@
       </div>
     </div>
   </div>
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-  <script src="../js/prestamos.js"></script>
+
+  <script src="../js/principales/prestamos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
 </body>

@@ -116,7 +116,7 @@
 
   </footer>
 
-  <script src="../js/addPrestamo.js"></script>
+  <script src="../js/add/addPrestamo.js"></script>
 </body>
 
 </html>
