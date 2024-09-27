@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registro de Equipos - DriverCom</title>
-  <link rel="icon" href="../img/www.ico">
+  <title>Registro de Equipos</title>
   <link rel="stylesheet" href="../css/Stylemenu.css">
   <link rel="stylesheet" href="../css/Stylosregistro.css">
   <link rel="stylesheet" href="../css/formularios.css">
@@ -20,9 +19,6 @@
           <img src="../img/LogoDrivercom.png" alt="Logo DriverCom" width="40" height="40">
           Driver<small>Com</small>
         </h1>
-        <button id="toggle-sidebar" class="toggle-sidebar" aria-label="Toggle Sidebar">
-          <i class="fas fa-bars"></i>
-        </button>
       </header>
       <nav class="sidebar-nav">
         <ul>
@@ -41,86 +37,85 @@
         <div class="user-menu">
           <button class="user-menu-toggle" id="user-menu-toggle" aria-haspopup="true" aria-expanded="false">
             <img src="../img/user2.jpg" class="user-image" alt="" width="40" height="40">
-            <span>Usuario</span>
+            <span></span>
           </button>
           <div class="user-menu-dropdown" id="user-menu-dropdown" hidden>
             <a href="close.php" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
-
           </div>
         </div>
       </header>
 
-
       <section id="equipos-section" class="content">
-        <h2>Gestión de Equipos</h2>
+        <h2>Registro de Equipos</h2>
 
         <!-- Formulario de Equipos -->
         <div class="form-container">
-          <form id="form-equipos" action="../vista/usuario/guardarEquipo.php" method="POST">
-            <!-- Campo oculto para ID Equipo (usado en edición) -->
-            <!-- <input type="hidden" id="id_equipo" name="id_equipo"> -->
+          <form id="form-equipos" action="../vista/equipo/guardarEquipo.php" method="POST">
+
+            <div class="form-group">
+              <label for="id-equipo">ID del Equipo</label>
+              <input type="text" id="id-equipo" name="id-equipo" placeholder="Ingrese ID del Equipo" required>
+            </div>
 
             <div class="form-group">
               <label for="numero-serie">Número de Serie</label>
-              <input type="text" id="t1" name="t1" placeholder="Ingrese Número de Serie" required>
+              <input type="text" id="numero-serie" name="numero-serie" placeholder="Ingrese Número de Serie" required>
             </div>
 
             <div class="form-group">
               <label for="nombre-equipo">Nombre del Equipo</label>
-              <input type="text" id="t2" name="t2" placeholder="Ingrese el nombre del equipo" required>
+              <input type="text" id="nombre-equipo" name="nombre-equipo" placeholder="Ingrese Nombre del Equipo" required>
             </div>
 
             <div class="form-group">
-              <label for="marca">Marca</label>
-              <select id="t3" name="t3" required>
-                <option value="" disabled selected>Seleccione una marca</option>
+              <label for="marca-equipo">Marca</label>
+              <select id="marca-equipo" name="marca-equipo" required>
+                <option value="" disabled selected>Seleccione la Marca</option>
                 <option value="HP">HP</option>
-                <option value="DELL">DELL</option>
-                <option value="LENOVO">LENOVO</option>
-                <option value="ASUS">ASUS</option>
-                <option value="ACER">ACER</option>
-                <option value="APPLE">APPLE</option>
-                <option value="OTROS">OTROS</option>
+                <option value="Dell">Dell</option>
+                <option value="Lenovo">Lenovo</option>
+                <option value="Apple">Apple</option>
+                <option value="Asus">Asus</option>
+                <option value="Acer">Acer</option>
+                <option value="Otra">Otra</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label for="categoria">Categoría</label>
-              <select id="t4" name="t4" required>
-                <option value="" disabled selected>Seleccione una categoría</option>
-                <option value="Desktop">Desktop</option>
+              <label for="categoria-equipo">Categoría</label>
+              <select id="categoria-equipo" name="categoria-equipo" required>
+                <option value="" disabled selected>Seleccione la Categoría</option>
                 <option value="Laptop">Laptop</option>
+                <option value="Desktop">Desktop</option>
+                <option value="Tablet">Tablet</option>
+                <option value="Servidor">Servidor</option>
                 <option value="Impresora">Impresora</option>
                 <option value="Monitor">Monitor</option>
-                <option value="Accesorio">Accesorio</option>
-                <option value="Otros">Otros</option>
+                <option value="Otro">Otro</option>
               </select>
             </div>
 
-
-            <!-- <div class="form-group">
-              <label for="estado">Estado</label>
-              <input type="text" id="estado" name="estado" required>
-            </div> -->
-
             <div class="form-group">
-              <label for="ubicacion">Ubicación</label>
-              <input type="text" id="t6" name="t6" placeholder="Ingrese La Ubicacion" required>
-            </div>
-
-            <!-- <div class="form-group">
-              <label for="fecha-ingreso">Fecha de Ingreso</label>
-              <input type="date" id="fecha_ingreso" name="fecha_ingreso" placeholder="Ingrese la Fecha de Ingreso" required>
-            </div> -->
-
-            <div class="form-group">
-              <label for="ingresado-por"></label>
-              <input type="hidden" id="t8" name="t8" placeholder="Ingreso Por" required>
-              <button type="submit" value="1" id="submit-btn">Guardar Equipo</button>
+              <label for="estado-equipo">Estado</label>
+              <select id="estado-equipo" name="estado-equipo" required>
+                <option value="" disabled selected>Seleccione el Estado</option>
+                <option value="Nuevo">Nuevo</option>
+                <option value="Usado">Usado</option>
+                <option value="Dañado">Dañado</option>
+                <option value="Reparación">En reparación</option>
+                <option value="Obsoleto">Obsoleto</option>
+              </select>
             </div>
 
             <div class="form-group">
+              <label for="ubicacion-equipo">Ubicación</label>
+              <input type="text" id="ubicacion-equipo" name="ubicacion-equipo" placeholder="Ingrese Ubicación del Equipo" required>
             </div>
+
+            <div class="form-group">
+              <button type="submit">Guardar Equipo</button>
+            </div>
+
           </form>
         </div>
       </section>
@@ -133,29 +128,29 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      // Función para cargar datos de equipo a editar
-      function cargarDatosEquipo(idEquipo) {
-        fetch('http://localhost/apidrivercom/equipo.php?id=' + idEquipo)
-          .then(response => response.json())
-          .then(data => {
-            if (data && !data.error) {
-              document.getElementById('id_equipo').value = data.ID_Equipo;
-              document.getElementById('numero_serie').value = data.Numero_Serie;
-              document.getElementById('nombre_equipo').value = data.Nombre_Equipo;
-              document.getElementById('marca').value = data.Marca;
-              document.getElementById('categoria').value = data.Categoria;
-              document.getElementById('estado').value = data.Estado;
-              document.getElementById('ubicacion').value = data.Ubicacion;
-              document.getElementById('fecha_ingreso').value = data.Fecha_Ingreso;
-              document.getElementById('ingresado_por').value = data.Ingresado_Por;
+      const userMenuToggle = document.getElementById('user-menu-toggle');
+      const userMenuDropdown = document.getElementById('user-menu-dropdown');
 
-              document.getElementById('submit-btn').innerText = "Actualizar Equipo";
-            } else {
-              console.error('Error al obtener los datos:', data.error);
-            }
-          })
-          .catch(error => console.error('Error al llamar a la API:', error));
-      }
+      userMenuToggle.addEventListener('click', function(event) {
+        event.stopPropagation();
+        const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+        this.setAttribute('aria-expanded', !expanded);
+        userMenuDropdown.hidden = expanded;
+      });
+
+      document.addEventListener('click', function(event) {
+        if (!userMenuToggle.contains(event.target) && !userMenuDropdown.contains(event.target)) {
+          userMenuToggle.setAttribute('aria-expanded', 'false');
+          userMenuDropdown.hidden = true;
+        }
+      });
+
+      document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          userMenuToggle.setAttribute('aria-expanded', 'false');
+          userMenuDropdown.hidden = true;
+        }
+      });
     });
   </script>
 </body>

@@ -40,7 +40,6 @@
         <div class="user-menu">
           <button class="user-menu-toggle" id="user-menu-toggle" aria-haspopup="true" aria-expanded="false">
             <img src="../img/user2.jpg" class="user-image" alt="" width="40" height="40">
-            <span>Usuario</span>
           </button>
           <div class="user-menu-dropdown" id="user-menu-dropdown" hidden>
           <a href="close.php" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>

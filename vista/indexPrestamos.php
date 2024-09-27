@@ -25,7 +25,7 @@
         </button>
       </header>
       <nav class="sidebar-nav">
-      <ul>
+        <ul>
           <li><a href="indexmenu.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
           <li><a href="indexEquipo.php"><i class="fas fa-laptop"></i> <span>Equipos</span></a></li>
           <li><a href="indexUsuario.php"><i class="fas fa-users"></i> <span>Usuarios</span></a></li>
@@ -41,11 +41,10 @@
         <div class="user-menu">
           <button class="user-menu-toggle" id="user-menu-toggle" aria-haspopup="true" aria-expanded="false">
             <img src="../img/user2.jpg" class="user-image" alt="" width="40" height="40">
-            <span>Usuario</span>
+            <span></span>
           </button>
           <div class="user-menu-dropdown" id="user-menu-dropdown" hidden>
-          <a href="close.php" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
-
+            <a href="close.php" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
           </div>
         </div>
       </header>
@@ -81,7 +80,7 @@
     </main>
   </div>
   <footer class="main-footer">
-  <p><strong>&copy; 2024 Driver <small>Com</small>.  Todos los derechos reservados.</strong></p>
+    <p><strong>&copy; 2024 Driver <small>Com</small>. Todos los derechos reservados.</strong></p>
 
   </footer>
   <script>
@@ -146,7 +145,7 @@
         });
         pdf.save('prestamos.pdf');
       });
-     
+
       // Add Loan Button
       addLoanBtn.addEventListener('click', function() {
         window.location.href = 'agregarPrestamo.php';

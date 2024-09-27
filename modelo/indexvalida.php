@@ -3,7 +3,7 @@ session_start();
 
 $t1 = $_POST['t1'];
 $t2 = $_POST['t2'];
-$baseUrl = "http://localhost/DriverCom/login.php";
+$baseUrl = "http://localhost/apidrivercom/login.php";
 
 function consumoApi($url, $data) {
     $ch = curl_init($url);
