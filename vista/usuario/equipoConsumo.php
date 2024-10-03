@@ -1,5 +1,5 @@
 <?php
-$baseUrl = "http://localhost/apidrivercom/equipo.php";
+$baseUrl = "http://localhost/basico/apidrivercom/equipo.php";
 
 function consumoApi($url)
 {

@@ -1,6 +1,6 @@
 
 <?php
-$baseUrl = "http://localhost/apidrivercom/prestamo.php";
+$baseUrl = "http://localhost/basico/apidrivercom/prestamo.php";
 
 // Función para consumir la API
 function consumoApi($url)

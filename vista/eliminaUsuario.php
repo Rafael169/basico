@@ -1,6 +1,6 @@
 <?php
 
-$url = "http://localhost/apidrivercom/usuario.php";
+$url = "http://localhost/basico/apidrivercom/usuario.php";
 
 
 $id = isset($_GET['id']) ? $_GET['id'] : null;

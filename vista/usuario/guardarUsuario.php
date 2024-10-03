@@ -2,7 +2,7 @@
 session_start();
 
 // La URL de tu API
-$url = "http://localhost/apidrivercom/usuario.php"; // Reemplaza con la URL de tu API
+$url = "http://localhost/basico/apidrivercom/usuario.php"; // Reemplaza con la URL de tu API
 
 // Verifica que los datos estén presentes
 if (isset($_POST['t1']) && isset($_POST['t2']) && isset($_POST['t3']) && isset($_POST['t5']) && isset($_POST['t6'])) {

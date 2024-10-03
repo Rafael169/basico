@@ -2,7 +2,7 @@
 session_start();
 
 // La URL de tu API
-$url = "http://localhost/apidrivercom/equipo.php";
+$url = "http://localhost/basico/apidrivercom/equipo.php";
 
 // Verifica que los datos estén presentes
 if (

@@ -58,7 +58,7 @@
 
 
             <?php
-            $baseUrl = "http://localhost/apidrivercom/persona.php";
+            $baseUrl = "http://localhost/basico/apidrivercom/persona.php";
 
             function consumoApi($url)
             {
@@ -90,7 +90,7 @@
             </div>
 
             <?php
-            $baseUrl = "http://localhost/apidrivercom/equipo.php";
+            $baseUrl = "http://localhost/basico/apidrivercom/equipo.php";
 
             function consumoApiEquipo($url)
             {
@@ -131,7 +131,7 @@
 
 
             <?php
-            $baseUrl = "http://localhost/apidrivercom/usuario.php";
+            $baseUrl = "http://localhost/basico/apidrivercom/usuario.php";
 
             function consumoApiUsuario($url)
             {

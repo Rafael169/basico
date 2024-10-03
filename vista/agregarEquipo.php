@@ -38,10 +38,6 @@
         <div class="form-container">
           <form id="form-equipos" action="../vista/equipo/guardarEquipo.php" method="POST">
 
-            <div class="form-group">
-              <label for="id-equipo">ID del Equipo</label>
-              <input type="text" id="id-equipo" name="id-equipo" placeholder="Ingrese ID del Equipo" required>
-            </div>
 
             <div class="form-group">
               <label for="numero-serie">Número de Serie</label>

@@ -2,7 +2,7 @@
 session_start();
 
 // La URL de tu API  
-$url = "http://localhost/apidrivercom/prestamo.php"; // Reemplaza con la URL de tu API
+$url = "http://localhost/basico/apidrivercom/prestamo.php"; // Reemplaza con la URL de tu API
 
 // Verifica que los datos estén presentes
 if (
