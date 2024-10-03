@@ -1,27 +1,3 @@
-<?php
-$baseUrl = "http://localhost/apidrivercom/persona.php";
-
-function consumoApi($url)
-{
-  $ch = curl_init();
-  curl_setopt($ch, CURLOPT_URL, $url);
-  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-  curl_setopt($ch, CURLOPT_HEADER, false);
-  $response = curl_exec($ch);
-  if (curl_errno($ch)) {
-    echo 'Error:' . curl_error($ch);
-  }
-  curl_close($ch);
-  return json_decode($response, true);
-}
-
-$page = 1;
-$apiUrl = $baseUrl . "?page=" . $page;  // URL de la API
-$data = consumoApi($apiUrl);
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -77,58 +53,125 @@ $data = consumoApi($apiUrl);
         <div class="form-container">
           <form id="form-prestamos" action="../vista/usuario/guardarPrestamo.php" method="POST">
 
-            <div class="form-group">
-              <label for="id-prestamo">ID Préstamo</label>
-              <input type="text" id="id-prestamo" name="id_prestamo" required>
-            </div>
 
-            <div class="form-group">
-              <label for="id-equipo">ID Equipo</label>
-              <select id="id-equipo" name="id_equipo" required></select> <!-- Dinámico desde la API -->
-            </div>
+
+
 
             <?php
-            // echo '<pre>';
-            // var_dump($data);
-            // echo '</pre>';
+            $baseUrl = "http://localhost/apidrivercom/persona.php";
+
+            function consumoApi($url)
+            {
+              $ch = curl_init();
+              curl_setopt($ch, CURLOPT_URL, $url);
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+              curl_setopt($ch, CURLOPT_HEADER, false);
+              $response = curl_exec($ch);
+              if (curl_errno($ch)) {
+                echo 'Error:' . curl_error($ch);
+              }
+              curl_close($ch);
+              return json_decode($response, true);
+            }
+
+            $page = 1;
+            $apiUrl = $baseUrl . "?page=" . $page;  // URL de la API
+            $data = consumoApi($apiUrl);
+
             ?>
+
             <div class="form-group">
               <label for="id-persona">ID Persona</label>
-              <select id="id-persona" name="id_persona" required>
+              <select id="idpersona" name="idpersona" required>
                 <?php foreach ($data['data'] as $item) { ?>
                   <option value="<?php echo $item["ID_Persona"]; ?>"><?php echo $item['Nombre_Completo']; ?></option>
                 <?php } ?>
               </select>
             </div>
 
+            <?php
+            $baseUrl = "http://localhost/apidrivercom/equipo.php";
+
+            function consumoApiEquipo($url)
+            {
+              $ch = curl_init();
+              curl_setopt($ch, CURLOPT_URL, $url);
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+              curl_setopt($ch, CURLOPT_HEADER, false);
+              $response = curl_exec($ch);
+              if (curl_errno($ch)) {
+                echo 'Error:' . curl_error($ch);
+              }
+              curl_close($ch);
+              return json_decode($response, true);
+            }
+
+            $page = 1;
+            $apiUrl = $baseUrl . "?page=" . $page;  // URL de la API
+            $data = consumoApiEquipo($apiUrl);
+
+            ?>
+            <?php
+            // Imprimir la variable $data o depuracion para ver los datos
+            // echo '<pre>';
+            // var_dump($data);
+            // echo '</pre>';
+            ?>
+            <div class="form-group">
+              <label for="id-equipo">ID Equipo</label>
+              <select id="idequipo" name="idequipo" required>
+                <?php foreach ($data['data'] as $item) { ?>
+                  <option value="<?php echo $item["ID_Equipo"]; ?>"><?php echo $item['Nombre_Equipo']; ?></option>
+                <?php } ?>
+              </select> <!-- Dinámico desde la API -->
+            </div>
+
+
+
+
+
+            <?php
+            $baseUrl = "http://localhost/apidrivercom/usuario.php";
+
+            function consumoApiUsuario($url)
+            {
+              $ch = curl_init();
+              curl_setopt($ch, CURLOPT_URL, $url);
+              curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+              curl_setopt($ch, CURLOPT_HEADER, false);
+              $response = curl_exec($ch);
+              if (curl_errno($ch)) {
+                echo 'Error:' . curl_error($ch);
+              }
+              curl_close($ch);
+              return json_decode($response, true);
+            }
+
+            $page = 1;
+            $apiUrl = $baseUrl . "?page=" . $page;  // URL de la API
+            $data = consumoApiUsuario($apiUrl);
+
+            ?>
 
             <div class="form-group">
               <label for="id-usuario">ID Usuario</label>
-              <select id="id-usuario" name="id_usuario" required></select> <!-- Dinámico desde la API -->
+              <select id="idequipo" name="idusuario" required>
+                <?php foreach ($data['data'] as $item) { ?>
+                  <option value="<?php echo $item["ID_Usuario"]; ?>"><?php echo $item['Nombre_Usuario']; ?></option>
+                <?php } ?>
+              </select> <!-- Dinámico desde la API -->
             </div>
 
-            <div class="form-group">
-              <label for="fecha-prestamo">Fecha de Préstamo</label>
-              <input type="date" id="fecha-prestamo" name="fecha_prestamo" required>
-            </div>
 
             <div class="form-group">
               <label for="fecha-devolucion">Fecha de Devolución</label>
-              <input type="date" id="fecha-devolucion" name="fecha_devolucion" required>
+              <input type="date" id="fdevo" name="fdevo" required>
             </div>
 
-            <div class="form-group">
-              <label for="estado">Estado</label>
-              <select id="estado" name="estado" required>
-                <option value="activo">Activo</option>
-                <option value="devuelto">Devuelto</option>
-                <option value="pendiente">Pendiente</option>
-              </select>
-            </div>
 
             <div class="form-group">
               <label for="comentarios">Comentarios</label>
-              <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+              <textarea id="comentario" name="comentario" rows="4"></textarea>
             </div>
 
             <div class="form-group">

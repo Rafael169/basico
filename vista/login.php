@@ -26,15 +26,11 @@ if (isset($_SESSION['datos']['data'][0]['rol'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <!-- estilos boostra para el modal -->
-
-
 </head>
 
 <body>
     <div class="Logo_Container"> <img src="../img/LogoDrivercom.png" alt="Logo" class="logo-image"> </div>
-    <br></br>
-    <a href="http://localhost/basico/vista/agregarUsuario.php"><strong> ======> Aqui para ingresar mientas tanto<====== </strong></a>
-    <br></br> 
+
     <div class="main">
         <h1 class="title_1">Bienvenido</h1>
         <!-- dirreccion a la que se redirecciona al darle a iniciar -->

@@ -10,14 +10,14 @@ if (
     isset($_POST['ndoc']) &&
     isset($_POST['tel']) &&
     isset($_POST['email']) &&
-    isset($_POST['dir']) 
+    isset($_POST['dir'])
 ) {
     $t1 = $_POST['nombre'];
     $t2 = $_POST['ndoc'];
     $t3 = $_POST['tel'];
     $t4 = $_POST['email'];
     $t5 = $_POST['dir'];
-   
+
 
     // Los datos a enviar en la solicitud POST
     $data = http_build_query(array(
@@ -26,10 +26,6 @@ if (
         'tel' => $t3,
         'email' => $t4,
         'dir' => $t5,
-
-
-
-
 
     ));
 

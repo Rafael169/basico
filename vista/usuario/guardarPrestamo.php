@@ -6,37 +6,26 @@ $url = "http://localhost/apidrivercom/prestamo.php"; // Reemplaza con la URL de 
 
 // Verifica que los datos estén presentes
 if (
-    isset($_POST['t1']) &&
-    isset($_POST['t2']) &&
-    isset($_POST['t3']) &&
-    isset($_POST['t4']) &&
-    isset($_POST['t5']) &&
-    isset($_POST['t6']) &&
-    isset($_POST['t7']) &&
-    isset($_POST['t8']) &&
-    isset($_POST['t9'])
+    isset($_POST['idpersona']) &&
+    isset($_POST['idequipo']) &&
+    isset($_POST['idusuario']) &&
+    isset($_POST['fdevo']) &&
+    isset($_POST['comentario']) 
 ) {
-    $t1 = $_POST['t1'];
-    $t2 = $_POST['t2'];
-    $t3 = $_POST['t3'];
-    $t5 = $_POST['t4'];
-    $t6 = $_POST['t5'];
-    $t6 = $_POST['t6'];
-    $t6 = $_POST['t7'];
-    $t6 = $_POST['t8'];
-    $t6 = $_POST['t9'];
+    $t1 = $_POST['idpersona'];
+    $t2 = $_POST['idequipo'];
+    $t3 = $_POST['idusuario'];
+    $t4 = $_POST['fdevo'];
+    $t5 = $_POST['comentario'];
 
     // Los datos a enviar en la solicitud POST
     $data = http_build_query(array(
-        't1' => $t1,
-        't2' => $t2,
-        't3' => $t3,
-        't4' => $t4,
-        't5' => $t5,
-        't6' => $t6,
-        't7' => $t7,
-        't8' => $t8,
-        't9' => $t9
+        'idpersona' => $t1,
+        'idequipo' => $t2,
+        'idusuario' => $t3,
+        'fdevo' => $t4,
+        'comentario' => $t5,
+        
     ));
 
     // Inicializa  cURL
