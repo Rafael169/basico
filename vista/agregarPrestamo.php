@@ -34,20 +34,17 @@ $data = consumoApi($apiUrl);
   <link rel="stylesheet" href="../css/Styletablas.css">
   <link rel="stylesheet" href="../css/formularios.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="dashboard">
     <aside class="sidebar" id="sidebar">
-      <header class="sidebar-header">
-        <h1>
-          <img src="../img/LogoDrivercom.png" alt="Logo DriverCom" width="40" height="40">
-          Driver<small>Com</small>
-        </h1>
-        <button id="toggle-sidebar" class="toggle-sidebar" aria-label="Toggle Sidebar">
-          <i class="fas fa-bars"></i>
-        </button>
-      </header>
+
+      <?php
+      include 'page/aside.php';
+      ?>
+
       <nav class="sidebar-nav">
         <ul>
           <li><a href="indexmenu.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
@@ -94,7 +91,7 @@ $data = consumoApi($apiUrl);
             // echo '<pre>';
             // var_dump($data);
             // echo '</pre>';
-             ?>
+            ?>
             <div class="form-group">
               <label for="id-persona">ID Persona</label>
               <select id="id-persona" name="id_persona" required>
@@ -143,10 +140,10 @@ $data = consumoApi($apiUrl);
     </main>
   </div>
 
-  <footer class="main-footer">
-    <p><strong>&copy; 2024 Driver <small>Com</small>. Todos los derechos reservados.</strong></p>
 
-  </footer>
+  <?php
+  include 'page/footer.php';
+  ?>
 
   <script src="../js/add/addPrestamo.js"></script>
 </body>

@@ -17,27 +17,11 @@
 
 <body>
   <div class="dashboard">
-    <aside class="sidebar" id="sidebar">
-      <header class="sidebar-header">
-        <h1>
-          <img src="../img/LogoDrivercom.png" alt="Logo DriverCom" width="40" height="40">
-          Driver<small>Com</small>
-        </h1>
-        <button id="toggle-sidebar" class="toggle-sidebar" aria-label="Toggle Sidebar">
-          <i class="fas fa-bars"></i>
-        </button>
-      </header>
-      <nav class="sidebar-nav">
-        <ul>
-          <li><a href="indexmenu.php"><i class="fas fa-home"></i> <span>Home</span></a></li>
-          <li><a href="indexEquipo.php"><i class="fas fa-laptop"></i> <span>Equipos</span></a></li>
-          <li><a href="indexUsuario.php"><i class="fas fa-users"></i> <span>Usuarios</span></a></li>
-          <li><a href="indexPersona.php"><i class="fas fa-user"></i> <span>Registro de persona</span></a></li>
-          <li><a href="indexPrestamos.php"><i class="fas fa-handshake"></i> <span>Préstamos</span></a></li>
-          <li><a href="indexCondiciones.php"><i class="fas fa-file-contract"></i> <span>Condiciones de uso</span></a></li>
-        </ul>
-      </nav>
-    </aside>
+
+
+    <?php
+    include 'page/aside.php';
+    ?>
 
     <main class="main-content">
       <header class="main-header">
@@ -88,10 +72,10 @@
       </section>
     </main>
   </div>
-  <footer class="main-footer">
-    <p><strong>&copy; 2024 Driver <small>Com</small>. Todos los derechos reservados.</strong></p>
 
-  </footer>
+  <?php
+  include 'page/footer.php';
+  ?>
 
   <!-- Modal de edición -->
   <div class="modal fade" id="editModalEquipo" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -128,7 +112,7 @@
 
             <div class="mb-3">
               <label for="edit-estado" class="form-label">Estado</label>
-              <input type="text" class="form-control" id="edit-estado" name="edit-estado"required>
+              <input type="text" class="form-control" id="edit-estado" name="edit-estado" required>
             </div>
 
             <div class="mb-3">

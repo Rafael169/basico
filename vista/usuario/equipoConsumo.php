@@ -32,8 +32,6 @@ if (isset($data['error'])) {
         $ubi = htmlspecialchars($item['Ubicacion']);
         $fingre = htmlspecialchars($item['Fecha_Ingreso']);
 
-
-
         echo '<tr>';
         echo '<td>' . $id . '</td>';
         echo '<td>' . $nserie . '</td>';
@@ -43,13 +41,6 @@ if (isset($data['error'])) {
         echo '<td>' . $estado . '</td>';
         echo '<td>' . $ubi . '</td>';
         echo '<td>' . $fingre . '</td>';
-
-                                                                                                                                            // nserie
-                                                                                                                                            // nombre
-                                                                                                                                            // marca
-                                                                                                                                            // categ
-                                                                                                                                            // estado
-                                                                                                                                            // ubi
 
         echo '<td>
                 <a href="#" class="button-container edit-btn" data-id="' . $id . '" data-nserie="' . $nserie . '" data-nombre="' . $nombre . '" data-marca="' . $marca . '" data-categ="' .$categ . '" data-estado="' . $estado . '" data-ubi="' . $ubi . '"><img src="../img/editar.png"></a>
