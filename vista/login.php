@@ -1,31 +1,14 @@
 <?php
-// session_start();
-// if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['error']) && isset($_SESSION['mensaje'])) {
-//     echo "<script>alert('" . $_SESSION['mensaje'] . "');</script>";
-//     unset($_SESSION['mensaje']); // Limpiar el mensaje después de mostrarlo
-// }
-// if (isset($_SESSION['datos']['data'][0]['rol'])) {
-//     header("Location: ./indexmenu.php");
-// }
-?>
-<?php
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['error']) && isset($_SESSION['mensaje'])) {
-    // Mostrar el modal si existe un mensaje
-    echo "
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var myModal = new bootstrap.Modal(document.getElementById('errorModal'));
-            myModal.show();
-        });
-    </script>
-    ";
+    echo "<script>alert('" . $_SESSION['mensaje'] . "');</script>";
     unset($_SESSION['mensaje']); // Limpiar el mensaje después de mostrarlo
 }
 if (isset($_SESSION['datos']['data'][0]['rol'])) {
     header("Location: ./indexmenu.php");
 }
 ?>
+
 
 
 <!DOCTYPE html>
@@ -43,8 +26,7 @@ if (isset($_SESSION['datos']['data'][0]['rol'])) {
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
     <!-- estilos boostra para el modal -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script> -->
+
 
 </head>
 
@@ -79,30 +61,6 @@ if (isset($_SESSION['datos']['data'][0]['rol'])) {
             </div>
         </form>
     </div>
-
-
-    <!-- modal para error -->
-
-    <!-- <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="errorModalLabel">Usuario o Contraseña Incorrecta</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <?php
-                    if (isset($_SESSION['mensaje'])) {
-                        echo $_SESSION['mensaje'];
-                    }
-                    ?>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
-        </div>
-    </div> -->
 
 </body>
 

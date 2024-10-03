@@ -6,29 +6,30 @@ $url = "http://localhost/apidrivercom/usuario.php";
 
 // Verifica que los datos estén presentes
 if (
-    isset($_POST['id']) &&
-    isset($_POST['nombre']) &&
-    isset($_POST['email']) &&
-    isset($_POST['pass']) &&
-    isset($_POST['fmodi']) &&
-    isset($_POST['estadi'])
+    isset($_POST['edit-id']) &&
+    isset($_POST['edit-nombre']) &&
+    isset($_POST['edit-email']) &&
+    isset($_POST['edit-pass']) &&
+    // isset($_POST['edit-fmodi']) &&
+    isset($_POST['edit-estado'])
 ) {
-    $t1 = $_POST['id']; // ID del usuario que vamos a editar
-    $t2 = $_POST['nombre'];
-    $t2 = $_POST['email'];
-    $t3 = $_POST['pass'];
-    $t8 = $_POST['fmodi'];
-    $t9 = $_POST['estadi'];
+    $t1 = $_POST['edit-id']; // ID del usuario que vamos a editar
+    $t2 = $_POST['edit-nombre'];
+    $t3 = $_POST['edit-email'];
+    $t4 = $_POST['edit-pass'];
+    // $t8 = $_POST['edit-fmodi'];
+    $t9 = $_POST['edit-estado'];
 
     // Los datos a enviar en la solicitud PUT
     $data = http_build_query(array(
-        'id' => $t1, // ID del usuario a modificar
-        'nombre' => $t2,
-        'email' => $t3,
-        'pass' => $t8,
-        'fmodi' => $t8,
-        'estadi' => $t9
+        'edit-id' => $t1, // ID del usuario a modificar
+        'edit-nombre' => $t2,
+        'edit-email' => $t3,
+        'edit-pass' => $t4,
+        // 'edit-fmodi' => $t8,
+        'edit-estado' => $t9
     ));
+   echo("hghghghgh   " . $data);
 
     // Inicializa cURL
     $ch = curl_init($url);
@@ -53,10 +54,12 @@ if (
 
     if ($result['success']) {
         // Redireccionar a la página de lista de usuarios
-        header('Location: indexUsuario.php');
+        header('Location: ../indexUsuario.php');
         exit;
     } else {
         // Mostrar un error si la API no tuvo éxito
         echo 'Error al actualizar usuario: ' . $result['message'];
+        header('Location: ../indexUsuario.php');
+        exit;
     }
 }

@@ -26,8 +26,8 @@ if (isset($data['error'])) {
         $id = htmlspecialchars($item['ID_Usuario']); // ID del alumno
         $nombre = htmlspecialchars($item['Nombre_Usuario']);
         $email = htmlspecialchars($item['Correo_Electronico']);
-        // $pass = htmlspecialchars($item['Contrasena']);
         $estado = htmlspecialchars($item['Estado']);
+        $fcrea = htmlspecialchars($item['Fecha_Creacion']);
         $fmodi = htmlspecialchars($item['Fecha_Modificacion']);
         $rol = htmlspecialchars($item['ID_Rol']);
 
@@ -35,18 +35,16 @@ if (isset($data['error'])) {
         echo '<td>' . $id . '</td>';
         echo '<td>' . $nombre . '</td>';
         echo '<td>' . $email . '</td>';
-        // echo '<td>' . $pass . '</td>';
         echo '<td>' . $estado . '</td>';
-        echo '<td>' . $fmodi . '</td>';
+        echo '<td>' . $fcrea . '</td>';
+        // echo '<td>' . $fmodi . '</td>';
         echo '<td>' . $rol . '</td>';
 
 
 
         echo '<td>
-                <a href="#" class="button-container edit-btn" data-id="' . $id . '" data-nombre="' . $nombre . '" data-email="' . $email . '" data-estado="' . $estado . '">
-                <img src="../img/editar.png">
-                </a>
-                <a href="#" class="button-container delete-btn" data-id="' . $id . '" data-type="usuario"><img src="../img/papelera.png"></a>
+                <a href="#" class="button-container edit-btn" data-id="' . $id . '" data-nombre="' . $nombre . '" data-email="' . $email . '" data-estado="' . $estado . '"><img src="../img/editar.png"></a>
+                <a href="eliminaUsuario.php?id=' . $id . '" class="btn btn-delete" onclick="return confirm(\'¿Deseas eliminar este registro?\');"><img src="../img/papelera.png"></a>
                 </td>';
         echo '</tr>';
     }

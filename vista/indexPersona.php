@@ -103,7 +103,7 @@
 
 
   <!-- Modal Bootstrap 5 -->
-  <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="confirmDeleteModal" tabindex="-1" aria-labelledby="confirmDeleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -119,7 +119,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <script src="../js/modalPersona.js"></script>
   <script src="../js/principales/persona.js"></script>

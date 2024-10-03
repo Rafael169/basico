@@ -85,12 +85,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const userName = this.getAttribute('data-nombre');
         const userEmail = this.getAttribute('data-email');
         const userEstado = this.getAttribute('data-estado');
+        const userPass = this.getAttribute('data-pass');
+        // const userFecha = this.getAttribute('data-fecha');
 
         // Asignar los valores al formulario del modal
         document.getElementById('edit-id').value = userId;
         document.getElementById('edit-nombre').value = userName;
         document.getElementById('edit-email').value = userEmail;
         document.getElementById('edit-estado').value = userEstado;
+        document.getElementById('edit-pass').value = userPass;
+        // document.getElementById('edit-fecha').value = userFecha;
 
         selectedUserId = userId; // Guardar el ID del usuario seleccionado
 
@@ -99,27 +103,27 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Al hacer clic en el botón de "Guardar cambios"
-    saveChangesBtn.addEventListener('click', function() {
-      const formData = new FormData(editForm);
-      const url = `http://localhost/apidrivercom/usuario.php?id=${selectedUserId}`;
+    // saveChangesBtn.addEventListener('click', function() {
+    //   const formData = new FormData(editForm);
+    //   const url = `http://localhost/apidrivercom/usuario.php?id=${selectedUserId}`;
 
-      fetch(url, {
-        method: 'PUT',
-        body: formData,
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          alert('Usuario actualizado correctamente');
-          location.reload(); // Recargar la página para ver los cambios
-        } else {
-          alert('Error al actualizar el usuario');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Error al procesar la solicitud.');
-      });
-    });
+    //   fetch(url, {
+    //     method: 'PUT',
+    //     body: formData,
+    //   })
+    //   .then(response => response.json())
+    //   .then(data => {
+    //     if (data.success) {
+    //       alert('Usuario actualizado correctamente');
+    //       location.reload(); // Recargar la página para ver los cambios
+    //     } else {
+    //       alert('Error al actualizar el usuario');
+    //     }
+    //   })
+    //   .catch(error => {
+    //     console.error('Error:', error);
+    //     alert('Error al procesar la solicitud.');
+    //   });
+    // });
   });
 

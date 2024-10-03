@@ -1,3 +1,27 @@
+<?php
+$baseUrl = "http://localhost/apidrivercom/persona.php";
+
+function consumoApi($url)
+{
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, $url);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_HEADER, false);
+  $response = curl_exec($ch);
+  if (curl_errno($ch)) {
+    echo 'Error:' . curl_error($ch);
+  }
+  curl_close($ch);
+  return json_decode($response, true);
+}
+
+$page = 1;
+$apiUrl = $baseUrl . "?page=" . $page;  // URL de la API
+$data = consumoApi($apiUrl);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -37,7 +61,7 @@
     </aside>
 
     <main class="main-content">
-    <header class="main-header">
+      <header class="main-header">
         <div class="user-menu">
           <button class="user-menu-toggle" id="user-menu-toggle" aria-haspopup="true" aria-expanded="false">
             <img src="../img/user2.jpg" class="user-image" alt="" width="40" height="40">
@@ -66,12 +90,20 @@
               <select id="id-equipo" name="id_equipo" required></select> <!-- Dinámico desde la API -->
             </div>
 
-
-
+            <?php
+            // echo '<pre>';
+            // var_dump($data);
+            // echo '</pre>';
+             ?>
             <div class="form-group">
               <label for="id-persona">ID Persona</label>
-              <select id="id-persona" name="id_persona" required></select> <!-- Dinámico desde la API -->
+              <select id="id-persona" name="id_persona" required>
+                <?php foreach ($data['data'] as $item) { ?>
+                  <option value="<?php echo $item["ID_Persona"]; ?>"><?php echo $item['Nombre_Completo']; ?></option>
+                <?php } ?>
+              </select>
             </div>
+
 
             <div class="form-group">
               <label for="id-usuario">ID Usuario</label>

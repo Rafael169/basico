@@ -84,28 +84,56 @@
   <footer class="main-footer">
     <p><strong>&copy; 2024 Driver <small>Com</small>. Todos los derechos reservados.</strong></p>
   </footer>
-  !-- Modal de confirmación de eliminación -->
-  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+
+  <!-- Modal de edición -->
+  <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="deleteModalLabel">Confirmar eliminación</h5>
+          <h5 class="modal-title" id="editModalLabel">Editar Usuario</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ¿Estás seguro de que deseas eliminar este registro?
+          <form id="edit-user-form" action="./usuario/editarUsuario.php" method="POST">
+            <input type="hidden" id="edit-id" name="edit-id">
+            <div class="mb-3">
+              <label for="edit-nombre" class="form-label">Nombre de Usuario</label>
+              <input type="text" class="form-control" id="edit-nombre" name="edit-nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="edit-email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="edit-email" name="edit-email" required>
+            </div>
+
+
+            <div class="mb-3">
+              <label for="edit-pass" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="edit-pass" name="edit-pass" required>
+            </div>
+
+            <!-- <div class="mb-3">
+              <label for="edit-fecha" class="form-label">Fecha Modificacion</label>
+              <input type="date" class="form-control" id="edit-fecha" name="edit-fecha" required>
+            </div> -->
+            <div class="mb-3">
+              <label for="edit-estado" class="form-label">Estado</label>
+              <input type="text" class="form-control" id="edit-estado" name="edit-estado" required>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <input type="submit" class="btn btn-primary" id="bg" value="Guardar cambios">
+
+            </div>
+          </form>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger" id="confirm-delete-btn">Eliminar</button>
-        </div>
+
       </div>
     </div>
   </div>
+
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
 
   <script src="../js/principales/prestamos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>

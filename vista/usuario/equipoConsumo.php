@@ -31,7 +31,7 @@ if (isset($data['error'])) {
         $estado = htmlspecialchars($item['Estado']);
         $ubi = htmlspecialchars($item['Ubicacion']);
         $fingre = htmlspecialchars($item['Fecha_Ingreso']);
-        $ingresopor = htmlspecialchars($item['Ingresado_Por']);
+
 
 
         echo '<tr>';
@@ -43,13 +43,14 @@ if (isset($data['error'])) {
         echo '<td>' . $estado . '</td>';
         echo '<td>' . $ubi . '</td>';
         echo '<td>' . $fingre . '</td>';
-        echo '<td>' . $ingresopor . '</td>';
 
 
+        // <a href="#" class="button-container delete-btn" data-id="' . $id . '" data-type="equipo"><img src="../img/papelera.png"></a>
 
         echo '<td>
                 <a href="agregarEquipo.php" class="button-container" data-id="' . $id . '"><img src="../img/editar.png"></a>
-                <a href="#" class="button-container delete-btn" data-id="' . $id . '" data-type="equipo"><img src="../img/papelera.png"></a>
+                <a href="eliminaEquipo.php?id=' . $id . '" class="btn btn-delete" onclick="return confirm(\'¿Estás seguro de que deseas eliminar este registro?\');"><img src="../img/papelera.png"></a>
+            
               </td>';
         echo '</tr>';
     }
