@@ -57,7 +57,7 @@
         <div class="form-container">
           <form id="form-personas" action="../vista/usuario/guardarPersona.php" method="POST">
             <!-- Campo oculto para ID Persona (usado en edición) -->
-            <input type="hidden" id="id_persona" name="id_persona">
+            <!-- <input type="hidden" id="id_persona" name="id_persona"> -->
 
             <div class="form-group">
               <label for="nombre-completo">Nombre Completo</label>

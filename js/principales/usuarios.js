@@ -101,6 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
         editModal.show(); // Mostrar el modal
       });
     });
+});
 
     // Al hacer clic en el botón de "Guardar cambios"
     // saveChangesBtn.addEventListener('click', function() {
@@ -125,5 +126,4 @@ document.addEventListener('DOMContentLoaded', function () {
     //     alert('Error al procesar la solicitud.');
     //   });
     // });
-  });
 

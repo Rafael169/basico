@@ -95,8 +95,10 @@
         </div>
         <div class="modal-body">
           <form id="edit-user-form" action="./usuario/editarUsuario.php" method="POST">
-            <input type="hidden" id="edit-id" name="edit-id">
-            <div class="mb-3">
+            
+          <input type="hidden" id="edit-id" name="edit-id">
+          
+          <div class="mb-3">
               <label for="edit-nombre" class="form-label">Nombre de Usuario</label>
               <input type="text" class="form-control" id="edit-nombre" name="edit-nombre" required>
             </div>

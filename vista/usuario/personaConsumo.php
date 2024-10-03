@@ -25,7 +25,7 @@ if (isset($data['error'])) {
     foreach ($data['data'] as $item) {
         $id = htmlspecialchars($item['ID_Persona']); // ID del alumno
         $nom = htmlspecialchars($item['Nombre_Completo']);
-        $nombre = htmlspecialchars($item['Numero_Documento']);
+        $ndoc = htmlspecialchars($item['Numero_Documento']);
         $tele = htmlspecialchars($item['Telefono']);
         $email = htmlspecialchars($item['Correo']);
         $dir = htmlspecialchars($item['Direccion']);
@@ -34,21 +34,16 @@ if (isset($data['error'])) {
         echo '<tr>';
         echo '<td>' . $id . '</td>';
         echo '<td>' . $nom . '</td>';
-        echo '<td>' . $nombre . '</td>';
+        echo '<td>' . $ndoc . '</td>';
         echo '<td>' . $tele . '</td>';
         echo '<td>' . $email . '</td>';
         echo '<td>' . $dir . '</td>';
 
         echo '<td>
-                <a href="agregarPersona.php" class="button-container" data-id="' . $id . '"><img src="../img/editar.png"></a>
-                  <a href="eliminaPersona.php?id=' . $id . '" class="btn btn-delete" onclick="return confirm(\'¿Estás seguro de que deseas eliminar este registro?\');"><img src="../img/papelera.png"></a>
+                <a href="#" class="button-container edit-btn" data-id="' . $id . '" data-nombre="' . $nom . '" data-ndoc="' . $ndoc . '" data-tel="' . $tele . '" data-email="' . $email . '" data-dir="' . $dir . '"><img src="../img/editar.png"></a>  
+                <a href="eliminaPersona.php?id=' . $id . '" class="btn btn-delete" onclick="return confirm(\'¿Estás seguro de que deseas eliminar este registro?\');"><img src="../img/papelera.png"></a>
               </td>';
 
         echo '</tr>';
     }
-
-
-
 }
-
-

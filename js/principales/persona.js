@@ -68,3 +68,50 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+
+
+
+// modal Editar
+document.addEventListener('DOMContentLoaded', function () {
+    const editModal = new bootstrap.Modal(document.getElementById('editModalPersona'));
+    // const editForm = document.getElementById('edit-user-form');
+    // const saveChangesBtn = document.getElementById('save-changes-btn');
+
+    let selectedUserId = null;
+
+    // Al hacer clic en el botón de editar
+    document.querySelectorAll('.edit-btn').forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Obtener datos del usuario desde los atributos data-*
+            const userId = this.getAttribute('data-id');
+            const userName = this.getAttribute('data-nombre');
+            const userEmail = this.getAttribute('data-ndoc');
+            const userEstado = this.getAttribute('data-tel');
+            const userPass = this.getAttribute('data-email');
+            const userDir = this.getAttribute('data-dir');
+            // const userFecha = this.getAttribute('data-fecha');
+
+            
+            
+            
+            
+            
+            
+            // Asignar los valores al formulario del modal
+            document.getElementById('edit-id').value = userId;
+            document.getElementById('edit-nombre').value = userName;
+            document.getElementById('edit-ndoc').value = userEmail;
+            document.getElementById('edit-tel').value = userEstado;
+            document.getElementById('edit-email').value = userPass;
+            document.getElementById('edit-dir').value = userDir;
+            // document.getElementById('edit-fecha').value = userFecha;
+
+            selectedUserId = userId; // Guardar el ID del usuario seleccionado
+
+            editModal.show(); // Mostrar el modal
+        });
+    });
+});
