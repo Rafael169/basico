@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="../css/Styletablas.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
@@ -95,10 +98,10 @@
         </div>
         <div class="modal-body">
           <form id="edit-user-form" action="./usuario/editarUsuario.php" method="POST">
-            
-          <input type="hidden" id="edit-id" name="edit-id">
-          
-          <div class="mb-3">
+
+            <input type="hidden" id="edit-id" name="edit-id">
+
+            <div class="mb-3">
               <label for="edit-nombre" class="form-label">Nombre de Usuario</label>
               <input type="text" class="form-control" id="edit-nombre" name="edit-nombre" required>
             </div>
@@ -133,11 +136,11 @@
     </div>
   </div>
 
+  <script src="../js/principales/prestamos.js"></script>
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-  <script src="../js/principales/prestamos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.20/jspdf.plugin.autotable.min.js"></script>
 </body>

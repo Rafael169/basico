@@ -44,11 +44,15 @@ if (isset($data['error'])) {
         echo '<td>' . $ubi . '</td>';
         echo '<td>' . $fingre . '</td>';
 
-
-        // <a href="#" class="button-container delete-btn" data-id="' . $id . '" data-type="equipo"><img src="../img/papelera.png"></a>
+                                                                                                                                            // nserie
+                                                                                                                                            // nombre
+                                                                                                                                            // marca
+                                                                                                                                            // categ
+                                                                                                                                            // estado
+                                                                                                                                            // ubi
 
         echo '<td>
-                <a href="agregarEquipo.php" class="button-container" data-id="' . $id . '"><img src="../img/editar.png"></a>
+                <a href="#" class="button-container edit-btn" data-id="' . $id . '" data-nserie="' . $nserie . '" data-nombre="' . $nombre . '" data-marca="' . $marca . '" data-categ="' .$categ . '" data-estado="' . $estado . '" data-ubi="' . $ubi . '"><img src="../img/editar.png"></a>
                 <a href="eliminaEquipo.php?id=' . $id . '" class="btn btn-delete" onclick="return confirm(\'¿Estás seguro de que deseas eliminar este registro?\');"><img src="../img/papelera.png"></a>
             
               </td>';

@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="../css/Stylemenu.css">
   <link rel="stylesheet" href="../css/Styletablas.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 
 </head>
@@ -72,7 +74,6 @@
               <th>Estado</th>
               <th>Ubicacion</th>
               <th>Fecha Ingreso</th>
-              <th>Ingresado Por</th>
               <th>Acciones</th>
 
             </tr>
@@ -92,28 +93,63 @@
 
   </footer>
 
-
-  <!-- Modal de confirmación de eliminación -->
-  <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <!-- Modal de edición -->
+  <div class="modal fade" id="editModalEquipo" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="deleteModalLabel">Confirmar eliminación</h5>
+          <h5 class="modal-title" id="editModalLabel">Editar Equipo</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ¿Estás seguro de que deseas eliminar este registro?
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-danger" id="confirm-delete-btn">Eliminar</button>
+          <form id="edit-user-form" action="./usuario/editarEquipo.php" method="POST">
+
+            <input type="hidden" id="edit-id" name="edit-id">
+
+            <div class="mb-3">
+              <label for="edit-nserie" class="form-label">N° Serie</label>
+              <input type="text" class="form-control" id="edit-nserie" name="edit-nserie" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="edit-nombre" class="form-label">Nombre Equipo</label>
+              <input type="text" class="form-control" id="edit-nombre" name="edit-nombre" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="edit-marca" class="form-label">Marca</label>
+              <input type="text" class="form-control" id="edit-marca" name="edit-marca" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="edit-categ" class="form-label">Categoría</label>
+              <input type="text" class="form-control" id="edit-categ" name="edit-categ" required>
+            </div>
+
+            <div class="mb-3">
+              <label for="edit-estado" class="form-label">Estado</label>
+              <input type="text" class="form-control" id="edit-estado" name="edit-estado"required>
+            </div>
+
+            <div class="mb-3">
+              <label for="edit-ubi" class="form-label">Ubicación</label>
+              <input type="text" class="form-control" id="edit-ubi" name="edit-ubi" required>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+              <input type="submit" class="btn btn-primary" id="bg" value="Guardar cambios">
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
+
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 
   <script src=../js/principales/equipo.js></script>
 

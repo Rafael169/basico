@@ -67,3 +67,46 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
+
+
+// modal Editar
+document.addEventListener('DOMContentLoaded', function () {
+    const editModal = new bootstrap.Modal(document.getElementById('editModalEquipo'));
+    // const editForm = document.getElementById('edit-user-form');
+    // const saveChangesBtn = document.getElementById('save-changes-btn');
+
+    let selectedUserId = null;
+
+    // Al hacer clic en el botón de editar
+    document.querySelectorAll('.edit-btn').forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Obtener datos del usuario desde los atributos data-*
+            const userId = this.getAttribute('data-id');
+            const userName = this.getAttribute('data-nserie');
+            const userEmail = this.getAttribute('data-nombre');
+            const userEstado = this.getAttribute('data-marca');
+            const userPass = this.getAttribute('data-categ');
+            const userDir = this.getAttribute('data-estado');
+            const userUbi = this.getAttribute('data-ubi');
+            // const userFecha = this.getAttribute('data-fecha');
+
+            // Asignar los valores al formulario del modal
+            document.getElementById('edit-id').value = userId;
+            document.getElementById('edit-nserie').value = userName;
+            document.getElementById('edit-nombre').value = userEmail;
+            document.getElementById('edit-marca').value = userEstado;
+            document.getElementById('edit-categ').value = userPass;
+            document.getElementById('edit-estado').value = userDir;
+            document.getElementById('edit-ubi').value = userUbi;
+            // document.getElementById('edit-fecha').value = userFecha;
+
+            selectedUserId = userId; // Guardar el ID del usuario seleccionado
+
+            editModal.show(); // Mostrar el modal
+        });
+    });
+});
+

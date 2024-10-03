@@ -73,7 +73,7 @@
               <label for="telefono">Teléfono</label>
               <input type="text" id="tel" name="tel" placeholder="Ingrese Número Telefono" required>
             </div>
-
+            
             <div class="form-group">
               <label for="correo">Correo Electrónico</label>
               <input type="email" id="email" name="email" placeholder="Ingrese El Correo" required>
