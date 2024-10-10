@@ -12,38 +12,83 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
+  <style>
 
+.logo {
+      font-size: 1.5rem;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+      border-radius: 10px;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align:left ;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+  
+</style>
 </head>
 
 <body>
   <div class="dashboard">
-
-
     <?php
     include 'page/aside.php';
     ?>
 
     <main class="main-content">
-      <header class="main-header">
-        <div class="user-menu">
-          <button class="user-menu-toggle" id="user-menu-toggle" aria-haspopup="true" aria-expanded="false">
-            <img src="../img/user2.jpg" class="user-image" alt="" width="40" height="40">
-            <span></span>
-          </button>
-          <div class="user-menu-dropdown" id="user-menu-dropdown" hidden>
-            <a href="close.php" id="logout-link"><i class="fa-solid fa-right-from-bracket"></i>Salir</a>
-          </div>
-        </div>
-      </header>
+    <header class="main-header">
+    <div class="user-menu">
+        <button class="user-menu-toggle" id="user-menu-toggle" aria-haspopup="true" aria-expanded="false">
+            <li class="dropdown">
+                <img src="../img/user2.jpg" href="#" class="dropbtn user-image" width="40" height="40"></i></img>
+                <div class="dropdown-content">
+                    <!-- <a href="#"><i class="fas fa-user-edit"></i> Perfil</a>
+                    <a href="#"><i class="fas fa-cog"></i> Ajustes</a>-->
+                    <a href="close.php"><i class="fas fa-sign-out-alt"></i> Salir</a>
+                </div>
+            </li>
+        </button>
+
+    </div>
+</header>
       <section class="content">
         <h2>Listado De Equipos</h2>
         <div class="button-container">
           <!-- boton de agregar equipo -->
-          <button href="agregarusuario.php" id="add-equipment-btn">
+          <button href="agregarusuario.php" id="add-equipment-btn"  style=" bottom: 10px !important; right: 40px !important; padding: 10px 30px !important;
+    background: #a62eff !important; color: white !important; border: none !important; border-radius: 20px !important; cursor: pointer !important;
+    font-size: 16px !important; font-family: var(--font) !important;">
             <i class="fas fa-plus"></i> Agregar nuevo equipo
           </button>
           <input type="text" id="search-input" placeholder="Buscar...">
-          <button id="download-pdf-btn">
+          <button id="download-pdf-btn"  style=" bottom: 10px !important; right: 40px !important; padding: 10px 30px !important;
+    background: #a62eff !important; color: white !important; border: none !important; border-radius: 20px !important; cursor: pointer !important;
+    font-size: 16px !important; font-family: var(--font) !important;">
             <i class="fas fa-download"></i> Descargar PDF
           </button>
         </div>

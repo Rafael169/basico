@@ -1,11 +1,13 @@
 /* Estilos genéricos para formularios */
 .form-container {
   background-color: var(--form-bg-color);
-  padding: 2rem;
+  padding: 5rem;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   margin: 0 auto;
+  border: 2px;
+  border-color: #35009A;
 }
 
 .form-container h3 {
