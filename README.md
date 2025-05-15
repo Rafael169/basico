@@ -27,3 +27,18 @@ El propósito de este proyecto es ofrecer una base funcional para un sistema de 
 
 ## 📁 Estructura del proyecto
 
+-├── api/ # Código PHP de la API REST
+-├── css/ # Hojas de estilo del frontend
+-├── js/ # Archivos JavaScript
+-├── index.html # Página principal de la plantilla
+-└── README.md # Documentación del proyecto
+
+
+## 🚀 Cómo ejecutar el proyecto
+
+1. Clona el repositorio.
+2. Coloca la carpeta del proyecto en tu servidor local (por ejemplo, `htdocs` si usas XAMPP).
+3. Asegúrate de tener una base de datos configurada para el inventario.
+4. Modifica las credenciales de conexión a la base de datos en los archivos PHP si es necesario.
+5. Abre `index.html` en tu navegador o accede a través del servidor local.
+
